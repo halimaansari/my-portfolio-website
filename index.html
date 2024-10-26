@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Design Mastery | Responsive Portfolio</title>
+    <style>
+       
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f9fafb; 
+        }
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .nav__content {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        nav .logo a:hover {
+            color: var(--primary-color-dark);
+        }
+        nav .checkbox {
+            display: none;
+        }
+        nav input {
+            display: none;
+        }
+        nav .checkbox i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            list-style: none;
+        }
+        ul li a {
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: 0.3s;
+        }
+        ul li a:hover {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color); 
+        }
+        .section {
+            background-color: var(--extra-light);
+            padding: 5rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .section__container {
+            max-width: var(--max-width);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .content {
+            max-width: 600px;
+            margin-right: 2rem;
+            text-align: left;
+        }
+        .subtitle {
+            letter-spacing: 2px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 1rem 0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); 
+        }
+        .description {
+            line-height: 1.5rem;
+            color: var(--text-light);
+            margin: 1rem 0;
+            font-weight: 400;
+        }
+        .action__btns {
+            display: flex;
+            gap: 1rem;
+        }
+        .action__btns button {
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            outline: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            background-color: transparent;
+            color: var(--primary-color);
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+        .hire__me {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+        .hire__me:hover {
+            background-color: var(--primary-color-dark);
+        }
+        .portfolio:hover {
+            background-color: var(--primary-color-dark);
+            color: #ffffff;
+        }
+        .image {
+            margin-top: 2rem;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .image img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 750px) {
+            nav .checkbox {
+                display: block;
+            }
+            ul {
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 85px);
+                left: -100%;
+                top: 85px;
+                background-color: var(--extra-light);
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+            }
+            nav #check:checked ~ ul {
+                left: 0;
+            }
+            .section {
+                padding: 5rem 1rem;
+            }
+            .section__container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .content {
+                margin-right: 0;
+                margin-left: 0;
+            }
+            .image {
+                margin: 0;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">My Portfolio</a></div>
+            <input type="checkbox" id="check">
+            <label for="check" class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+                         <!------------------ Home Section ------------------------>
+
+    <section class="home gradient-bg" id="home">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">HELLO🙋‍♀️</p>
+                <h1 class="title">
+                    I'm <span>Halima Sadia</span>,<br /> a <span>Web Developer</span>
+                </h1>
+                <p class="description">
+                    Welcome to my portfolio! I’m a creative web developer passionate about building beautiful, responsive, and user-friendly websites. Let’s bring your vision to life!
+                </p>
+                <div class="action__btns">
+                    <button class="hire__me" onclick="scrollToContact()">Hire Me</button>
+                    <button class="portfolio" onclick="scrollToPortfolio()">View My Work</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="./assests/intro.jpeg" alt="profile" />
+            </div>
+        </div>
+    </section>
+
+                          <!------------------ About Section ------------------------>
+
+    <section class="about gradient-bg" id="about">
+        <div class="section__container">
+            <div class="content">
+                <p class="subtitle">ABOUT ME</p>
+                <h2 class="title">I'm <span>Halima Sadia</span></h2>
+                <p class="description">
+                    Hello! I'm Halima Sadia, a passionate web developer currently enrolled in an Advanced Diploma in Web and App Development since December 2022. My journey in web development began with a curiosity about technology and a desire to create impactful solutions.
+                </p>
+                <p class="description">
+                    In June 2023, I enrolled in a Graphic Design course, which I completed in October. During this course, I learned to work with Adobe Photoshop, Adobe Illustrator, enhancing my ability to create visually appealing and user-friendly designs.
+                </p>
+                <p class="description">
+                    I have a solid foundation in HTML, CSS, and JavaScript, Bootstrap5 and I am currently learning Firebase to expand my skill set further. I thrive on challenges and love turning complex problems into simple, beautiful, and intuitive designs.
+                </p>
+                <p class="description">
+                    I am particularly interested in remote job opportunities and contributing to open source projects, as I believe they offer great avenues for learning and collaboration. 
+                </p>
+                <p class="description">
+                    When I’m not coding, you can find me exploring new technologies or enjoying a good book. Feel free to check out my projects or get in touch for collaboration!
+                </p>
+            </div>
+            <div class="image">
+                <img src="./assests/intro.jpeg" alt="About Me" />
+            </div>
+        </div>
+    </section>
+
+                    <!------------------ Resume Section ------------------------>
+
+    <section class="resume-area" id="resume">
+        <div class="resume-container">
+            <div class="resume-card overview-card">
+                <h3>Resume Overview</h3>
+                <p class="description">
+                    A detail-oriented web developer with a passion for building responsive and engaging user interfaces. Currently enrolled in an Advanced Diploma in Web and App Development, I am proficient in HTML, CSS, JavaScript, and various frameworks.
+                </p>
+            </div>
+            <div class="resume-card skills-card">
+                <h3>Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-item"><i class="fas fa-code"></i> HTML</div>
+                    <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="skill-item"><i class="fab fa-js-square"></i>JavaScript</div>
+                    <div class="skill-item"><i class="fab fa-bootstrap"></i>Bootstrap5</div>
+                    <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
+                    <div class="skill-item">
+                        <img src="https://p1.hiclipart.com/preview/360/805/72/166-honeycomb-icons-and-ini-s-by-dave-adobe-photoshop-png-icon.jpg" alt="Adobe Photoshop" style="width: 20px; margin-right: 0.5rem;">
+                        Adobe Photoshop
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="action__btns1">
+            <a href="./assests/resume.png" class="portfolio" download id="download-resume-btn">
+                <i class="fas fa-download"></i> View My Resume😍
+            </a>
+        </div>
+    </section>
+
+                           <!------------------------- portfolio-area ------------------------------->
+
+    <div class="portfolio-area" id="portfolio">
+        <h2 class="portfolio-title">My Portfolio</h2>
+        <p class="portfolio-subtitle">A selection of my work</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"> <a href="https://halimaansari.github.io/sign-up-form-with-validation" style="color: #9333ea;">Project 1</a></h3>
+                <p class="portfolio-card-description">A user-friendly registration form featuring essential validation for a seamless sign-in and sign-up experience. Crafted with HTML, CSS, and JavaScript, it ensures smooth user interactions.</p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/sign-up-form-with-validation" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"><a href="https://halimaansari.github.io/Digital-Clock/" style="color: #9333ea;">Project 2</a></h3>
+                <p class="portfolio-card-description">
+                    A sleek, responsive digital clock built with HTML, CSS, and JavaScript. It updates every second and adapts to any screen size for a modern user experience.
+                </p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/Digital-Clock" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"><a href="https://halimaansari.github.io/sign-in--sign-up-form/" style="color: #9333ea;">Project 3</a></h3>
+                <p class="portfolio-card-description">A fully responsive registration form that utilizes local data store for seamless sign-in and sign-up. Built with HTML, CSS, and JavaScript, it ensures efficient user interactions and data persistence.</p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/sign-in--sign-up-form" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"><a href="https://halimaansari.github.io/chase-Board/" style="color: #9333ea;">Project 4</a></h3>
+                <p class="portfolio-card-description">A responsive chessboard designed with HTML, CSS, and media queries. This project features hover effects for an interactive experience, showcasing a clean and functional layout.</p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/chase-Board" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"> <a href="https://halimaansari.github.io/hackthon-0.1/" style="color: #9333ea;">Project 5</a></h3>
+                <p class="portfolio-card-description">A fully responsive website created during a hackathon, featuring a logo and a navigation bar designed with HTML and CSS. The home section showcases a clean layout, demonstrating skills developed as a beginner.</p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/hackthon-0.1" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <h3 class="portfolio-card-title"><a href="https://halimaansari.github.io/mobile-website" style="color: #9333ea;">Project 6</a></h3>
+                <p class="portfolio-card-description">A responsive mobile website template crafted with HTML and CSS. This template features an intuitive layout, ensuring seamless navigation and user experience on mobile devices.</p>
+                <div class="portfolio-card-actions">
+                    <a href="https://github.com/halimaansari/mobile-website" class="portfolio-card-link">View Repo/Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                             <!-------------- Contact Section --------------------------->
+
+    <section class="contact-section" id="contact">
+        <div class="section__container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+        <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
+        <footer>
+            <p>Created by Halima Sadia🥰, All Rights Reserved</p>
+        </footer>
+        
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

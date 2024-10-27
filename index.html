@@ -195,7 +195,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact-section">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -213,9 +213,10 @@
                     Welcome to my portfolio! I’m a creative web developer passionate about building beautiful, responsive, and user-friendly websites. Let’s bring your vision to life!
                 </p>
                 <div class="action__btns">
-                    <button class="hire__me" onclick="scrollToContact()">Hire Me</button>
+                    <button class="hire__me" onclick="scrollTocontactSection()">Hire Me</button>
                     <button class="portfolio" onclick="scrollToPortfolio()">View My Work</button>
                 </div>
+                
             </div>
             <div class="image">
                 <img src="./assests/intro.jpeg" alt="profile" />
@@ -279,7 +280,7 @@
         </div>
         <div class="action__btns1">
             <a href="./assests/resume.png" class="portfolio" download id="download-resume-btn">
-                <i class="fas fa-download"></i> View My Resume😍
+                <i class="fas fa-eye"></i> View My Resume😍
             </a>
         </div>
     </section>
@@ -337,28 +338,27 @@
         </div>
     </div>
 
-                             <!-------------- Contact Section --------------------------->
-
-    <section class="contact-section" id="contact">
-        <div class="section__container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+    <section class="get-in-touch" id="contact-section">
+        <div class="contact-wrapper">
+            <h2 class="get-in-touch-title">Contact Me</h2>
+            <p class="get-in-touch-description">"I’m always open to new opportunities and collaborations.Connect with me through any of the platforms below.</p>
+            <div class="contact-buttons">
+                <a href="https://www.linkedin.com/in/halima-sadia-ansari-618200323/" target="_blank" class="platform-button">
+                    <i class="fab fa-linkedin"></i>Halima Sadia Ansari LinkedIn
+                </a>
+                <a href="https://github.com/halimaansari" target="_blank" class="platform-button">
+                    <i class="fab fa-github"></i> halimaansari GitHub
+                </a>
+                <a href="mailto:hsadiaansari@gmail.com" class="platform-button">
+                    <i class="fas fa-envelope"></i> hsadiaansari@gmail.com
+                </a>
+            </div>
         </div>
     </section>
+    
+    
+
+                            
         <a href="#" class="back-to-top" id="backToTop">↑ Top</a>
         <footer>
             <p>Created by Halima Sadia🥰, All Rights Reserved</p>

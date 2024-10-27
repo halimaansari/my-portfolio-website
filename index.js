@@ -78,21 +78,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-function scrollToContact() {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        console.error('Contact section not found');
-    }
+
+function scrollTocontactSection() {
+    const section = document.getElementById('contact-section'); // Adjust this to your section ID
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function scrollToPortfolio() {
-    const portfolioSection = document.getElementById('portfolio');
-    if (portfolioSection) {
-        portfolioSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        console.error('Portfolio section not found');
-    }
+    const section = document.getElementById('portfolio'); // Ensure this ID matches your portfolio section
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
 

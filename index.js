@@ -32,15 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
    
-    const downloadBtn = document.getElementById('download-btn');
-    if (downloadBtn) {
-        downloadBtn.addEventListener('click', function (event) {
-            event.preventDefault(); 
-            const imgSrc = this.href; 
-            document.getElementById('img-preview').src = imgSrc;
-            document.getElementById('preview-modal').style.display = 'block'; 
-        });
-    }
+ 
 
     
     const closeModal = document.querySelector('.close');
